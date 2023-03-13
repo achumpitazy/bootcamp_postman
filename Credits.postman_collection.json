@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "41e559d0-becb-4d19-89f0-1725d5fe2118",
+		"name": "Credits",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5117096"
+	},
+	"item": [
+		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "allCredit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCreditPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"640e5cf475c77c51458e8fd2\",\r\n    \"creditAmount\": 6000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCreditCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"640e5d0c75c77c51458e8fd5\",\r\n    \"creditAmount\": 23000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payCredit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640e7c58f02fcb27ec46e2de\",\r\n    \"amount\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCredit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCredit XId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit/640e6e14af7c437de5919416",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit",
+								"640e6e14af7c437de5919416"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCreditXCustomerID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit/consult/640e5cf475c77c51458e8fd2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit",
+								"consult",
+								"640e5cf475c77c51458e8fd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCredit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/credit/6408e6abecd1b96059454c75",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"credit",
+								"6408e6abecd1b96059454c75"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreditCard",
+			"item": [
+				{
+					"name": "allCreditCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8084/creditcard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCreditCardPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"640e5cf475c77c51458e8fd2\",\r\n    \"creditAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\",\r\n    \"numberCard\": \"0123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCreditCardCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\": \"640e5d0c75c77c51458e8fd5\",\r\n    \"creditAmount\": 7000,\r\n    \"creditDate\": \"2022-05-01\",\r\n    \"numberCard\": \"0123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640e7ca7f02fcb27ec46e2e0\",\r\n    \"amount\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "consumeCreditCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640e7ca7f02fcb27ec46e2e0\",\r\n    \"amount\": 130\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/consume",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"consume"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCreditCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e782ecd1b96059454c77\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"AHORRO\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\",\r\n    \"numberCard\": \"0123456789000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCreditCard XId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/6408e782ecd1b96059454c77ddd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"6408e782ecd1b96059454c77ddd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCreditCardXCustomerID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/consult/640e5d0c75c77c51458e8fd5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"consult",
+								"640e5d0c75c77c51458e8fd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCreditCard",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6408e6abecd1b96059454c75\",\r\n    \"customerId\": \"00000004\",\r\n    \"typeAccount\": \"CORRIENTE\",\r\n    \"creditAmount\": 2000,\r\n    \"existingAmount\": 2000,\r\n    \"creditDate\": \"2022-05-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/creditcard/6408e782ecd1b96059454c77",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"creditcard",
+								"6408e782ecd1b96059454c77"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

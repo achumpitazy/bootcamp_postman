@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "28c963b1-ad70-4d62-95ee-4855e73b348f",
+		"name": "BankAccounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5117096"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "allAccount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createAccountPerson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"customerId\": \"640f336670821c70ee3cd764\",\r\n    \"typeAccount\": 0,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createAccountCompany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"customerId\": \"640e5d0575c77c51458e8fd4\",\r\n    \"typeAccount\": 0,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640a5822fabfef12e72802f5\",\r\n    \"customerId\": \"00000004ss8888\",\r\n    \"typeAccount\": 1,\r\n    \"amount\": 100.0,\r\n    \"maintenance\": 13.0,\r\n    \"transaction\": 4,\r\n    \"operationDay\": 20,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "restartNumberTransactions",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/account/restartTransactions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"restartTransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "depositAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640f339c5131a67e5a3bf302\",\r\n    \"amount\": \"1000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"deposit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "withdrawalAccount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640f339c5131a67e5a3bf302\",\r\n    \"amount\": \"200\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/withdrawal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"withdrawal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAccount XId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640a5822fabfef12e72802f5\",\r\n    \"customerId\": \"00000004ss8888\",\r\n    \"typeAccount\": 1,\r\n    \"amount\": 100.0,\r\n    \"maintenance\": 13.0,\r\n    \"transaction\": 4,\r\n    \"operationDay\": 20,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/640f339c5131a67e5a3bf302",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"640f339c5131a67e5a3bf302"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAccountXCustomerID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640a5822fabfef12e72802f5\",\r\n    \"customerId\": \"00000004ss8888\",\r\n    \"typeAccount\": 1,\r\n    \"amount\": 100.0,\r\n    \"maintenance\": 13.0,\r\n    \"transaction\": 4,\r\n    \"operationDay\": 20,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/consult/640e5cf475c77c51458e8fd2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"consult",
+								"640e5cf475c77c51458e8fd2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccount",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"640a5822fabfef12e72802f5\",\r\n    \"customerId\": \"00000004ss8888\",\r\n    \"typeAccount\": 1,\r\n    \"amount\": 100.0,\r\n    \"maintenance\": 13.0,\r\n    \"transaction\": 4,\r\n    \"operationDay\": 20,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/account/640a5822fabfef12e72802f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"account",
+								"640a5822fabfef12e72802f5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
