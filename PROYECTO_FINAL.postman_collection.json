@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "38d2db4a-a0f6-4471-9c0a-6ccdc1f6e199",
-		"name": "PROYECTO_2",
+		"_postman_id": "2739e4ce-7de1-4b35-86f0-1d861071aff1",
+		"name": "PROYECTO_FINAL",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5117096"
 	},
@@ -38,7 +38,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"customerId\": \"64192a74f11f72241d4eac18\",\r\n    \"typeAccount\": 1,\r\n    \"numberAccount\": \"000000000001\",\r\n    \"amount\": 1000\r\n}",
+									"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"customerId\": \"64192a74f11f72241d4eac18\",\r\n    \"typeAccount\": 2,\r\n    \"numberAccount\": \"000000000001\",\r\n    \"amount\": 10\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -96,7 +96,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"640a5822fabfef12e72802f5\",\r\n    \"customerId\": \"00000004ss8888\",\r\n    \"typeAccount\": 1,\r\n    \"amount\": 100.0,\r\n    \"maintenance\": 13.0,\r\n    \"transaction\": 4,\r\n    \"operationDay\": 20,\r\n    \"dateAccount\": \"2022-09-09\",\r\n    \"numberAccount\": \"000000000001\"\r\n}",
+									"raw": "{\r\n        \"id\": \"641f281787906b19d0070122\",\r\n        \"customerId\": \"64192a74f11f72241d4eac18\",\r\n        \"typeAccount\": 1,\r\n        \"amount\": 10.0,\r\n        \"startAmount\": 10.0,\r\n        \"maintenance\": 0.0,\r\n        \"transaction\": 3,\r\n        \"operationDay\": 15,\r\n        \"typeCustomer\": \"PERSON\",\r\n        \"commission\": 5.0,\r\n        \"numberAccount\": \"000000000001\"\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -144,7 +144,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"64192a8085efc12229d31ce2\",\r\n    \"amount\": \"200\"\r\n}",
+									"raw": "{\r\n    \"id\": \"64192adf85efc12229d31ce3\",\r\n    \"amount\": \"200\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -271,7 +271,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8085/account/6414de655ef23234cb4bde6b",
+									"raw": "http://localhost:8085/account/641f281787906b19d0070122",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -279,7 +279,7 @@
 									"port": "8085",
 									"path": [
 										"account",
-										"6414de655ef23234cb4bde6b"
+										"641f281787906b19d0070122"
 									]
 								}
 							},
@@ -342,6 +342,226 @@
 									"path": [
 										"account",
 										"640a5822fabfef12e72802f5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Debit",
+					"item": [
+						{
+							"name": "allDebit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8088/debit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"debit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createDebit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"customerId\": \"64192a74f11f72241d4eac18\",\r\n    \"cardNumber\": \"02102020202\",\r\n    \"amount\": 10,\r\n    \"customerType\": \"PERSONA\",\r\n    \"accountId\": [\r\n        \"641f281787906b19d0070122\",\r\n        \"64192adf85efc12229d31ce3\"\r\n    ],\r\n    \"productType\": \"DEBIT_CARD\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/debit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"debit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "depositDebit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"642b1016c6a2db21fc590704\",\r\n    \"amount\": \"20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/debit/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"debit",
+										"deposit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "payDebit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"642b1016c6a2db21fc590704\",\r\n    \"amount\": \"535\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8088/debit/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8088",
+									"path": [
+										"debit",
+										"pay"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Yanki",
+					"item": [
+						{
+							"name": "allYanki",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8089/yanki",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"yanki"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createYanki",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"typeDocument\": \"DNI\",\r\n    \"NumberDocument\": \"12345678\",\r\n    \"Telephone\": \"987456322\",\r\n    \"email\": \"a@a.com\",\r\n    \"imei\": \"02356478\",\r\n    \"idDebit\": \"642b1016c6a2db21fc590704\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/yanki",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"yanki"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "depositYanki",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"telephone\": \"987456322\",\r\n    \"amount\": \"1500\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/yanki/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"yanki",
+										"deposit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "payYanki",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"telephone\": \"987456322\",\r\n    \"amount\": \"13\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8089/yanki/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8089",
+									"path": [
+										"yanki",
+										"pay"
 									]
 								}
 							},
@@ -1242,7 +1462,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8086/transaction/customer/640f336670821c70ee3cd764",
+									"raw": "http://localhost:8086/transaction/customer/64192a74f11f72241d4eac18",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1251,7 +1471,7 @@
 									"path": [
 										"transaction",
 										"customer",
-										"640f336670821c70ee3cd764"
+										"64192a74f11f72241d4eac18"
 									]
 								}
 							},
@@ -1263,7 +1483,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8086/transaction/product/640f339c5131a67e5a3bf302",
+									"raw": "http://localhost:8086/transaction/product/64192a8085efc12229d31ce2",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1272,7 +1492,7 @@
 									"path": [
 										"transaction",
 										"product",
-										"640f339c5131a67e5a3bf302"
+										"64192a8085efc12229d31ce2"
 									]
 								}
 							},
@@ -1285,7 +1505,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"productId\": \"640e5cf475c77c51458e8fd2\",\r\n    \"productType\": \"AHORRO\",\r\n    \"customerId\": \"640e5cf475c7\",\r\n    \"transactionType\": \"DEPOSTIO\",\r\n    \"transactionDate\": \"2022-09-09\",\r\n    \"amount\": 100\r\n}",
+									"raw": "{\r\n    \"__COMENTARIO__\": \"typeAccount- 0:AHORRO, 1:C_CORRIENTE, 2:PLAZO_FIJO]\",\r\n    \"productId\": \"640e5cf475c77c51458e8fd2\",\r\n    \"productType\": \"AHORRO\",\r\n    \"customerId\": \"640e5cf475c7\",\r\n    \"transactionType\": \"DEPOSTIO\",\r\n    \"amount\": 100,\r\n    \"balance\": 10\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1487,21 +1707,61 @@
 							"response": []
 						},
 						{
-							"name": "average",
+							"name": "averageAccount",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8087/consult/average/64192adf85efc12229d31ce3",
+									"raw": "http://localhost:8080/consult/average/64192a74f11f72241d4eac18",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8087",
+									"port": "8080",
 									"path": [
 										"consult",
 										"average",
-										"64192adf85efc12229d31ce3"
+										"64192a74f11f72241d4eac18"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Configserver",
+					"item": [
+						{
+							"name": "config",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "consumer",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "consumer",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8891/reports/master",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8891",
+									"path": [
+										"reports",
+										"master"
 									]
 								}
 							},
